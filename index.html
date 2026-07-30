@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hosting Gratuito para Developers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Barra de progreso -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Navegación -->
+  <nav class="nav-controls">
+    <button class="nav-btn" id="prevBtn" aria-label="Anterior">&#10094;</button>
+    <span class="slide-counter" id="slideCounter">1 / 12</span>
+    <button class="nav-btn" id="nextBtn" aria-label="Siguiente">&#10095;</button>
+  </nav>
+
+  <!-- Indicador de diapositivas -->
+  <div class="slide-dots" id="slideDots"></div>
+
+  <!-- ==================== DIAPOSITIVAS ==================== -->
+  <div class="slides-container" id="slidesContainer">
+
+    <!-- SLIDE 1: Portada -->
+    <section class="slide slide--cover active" data-slide="0">
+      <div class="slide-content">
+        <div class="cover-badge">Sesión 5 — Deploy</div>
+        <h1 class="cover-title">Hosting Gratuito<br>para Developers</h1>
+        <p class="cover-subtitle">Plataformas, herramientas y una guía práctica para llevar tus proyectos a producción sin gastar un centavo.</p>
+        <div class="cover-meta">
+          <span>Curso Programadores</span>
+          <span class="cover-dot"></span>
+          <span>2026</span>
+        </div>
+      </div>
+      <div class="cover-decoration">
+        <div class="deco-circle deco-circle--1"></div>
+        <div class="deco-circle deco-circle--2"></div>
+        <div class="deco-circle deco-circle--3"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: ¿Por qué hosting gratuito? -->
+    <section class="slide slide--dark" data-slide="1">
+      <div class="slide-content">
+        <div class="slide-label">Introducción</div>
+        <h2>¿Por qué Hosting Gratuito?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">&#128176;</div>
+            <h3>Sin costo inicial</h3>
+            <p>Lanza tu MVP o portafolio sin inversión. Ideal para aprender y validar ideas antes de escalar.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">&#9889;</div>
+            <h3>Deploy en minutos</h3>
+            <p>Conecta tu repo de GitHub y tu app está online. Sin configurar servidores, sin SSH, sin dolor de cabeza.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">&#128736;</div>
+            <h3>Aprende haciendo</h3>
+            <p>Entiendes CI/CD, dominios, variables de entorno y más. El mejor way to learn es deployando de verdad.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">&#128640;</div>
+            <h3>Escalable después</h3>
+            <p>Si crece, migras a un plan de pago. Pero empezar gratis te da tiempo para encontrar product-market fit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: Panorama General -->
+    <section class="slide slide--light" data-slide="2">
+      <div class="slide-content">
+        <div class="slide-label">Panorama</div>
+        <h2>¿Qué tipo de hosting necesitas?</h2>
+        <div class="category-cards">
+          <div class="category-card category-card--frontend">
+            <div class="category-header">
+              <span class="category-icon">&#127912;</span>
+              <h3>Frontend / SPA</h3>
+            </div>
+            <p>Sitios estáticos, React, Vue, Angular, HTML/CSS/JS puro.</p>
+            <div class="category-tags">
+              <span class="tag">Vercel</span>
+              <span class="tag">Netlify</span>
+              <span class="tag">GitHub Pages</span>
+              <span class="tag">Cloudflare Pages</span>
+            </div>
+          </div>
+          <div class="category-card category-card--backend">
+            <div class="category-header">
+              <span class="category-icon">&#9881;</span>
+              <h3>Backend / API</h3>
+            </div>
+            <p>Node.js, Python, Go, Java. APIs REST, microservicios.</p>
+            <div class="category-tags">
+              <span class="tag">Render</span>
+              <span class="tag">Fly.io</span>
+              <span class="tag">Railway</span>
+            </div>
+          </div>
+          <div class="category-card category-card--infra">
+            <div class="category-header">
+              <span class="category-icon">&#128421;</span>
+              <h3>Infra / VMs</h3>
+            </div>
+            <p>Control total. Docker, bases de datos, lo que quieras.</p>
+            <div class="category-tags">
+              <span class="tag tag--gold">Oracle Cloud</span>
+              <span class="tag">AWS Free Tier</span>
+              <span class="tag">Google Cloud</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: Vercel -->
+    <section class="slide slide--gradient-vercel" data-slide="3">
+      <div class="slide-content">
+        <div class="slide-label">Frontend & Serverless</div>
+        <h2>Vercel</h2>
+        <div class="split-layout">
+          <div class="split-left">
+            <ul class="check-list">
+              <li>Deploy automático al hacer push a GitHub</li>
+              <li>Framework Detection: Next.js, React, Vue, Svelte, Astro</li>
+              <li>Serverless Functions (Node.js, Python, Go)</li>
+              <li>Analytics integrado</li>
+              <li>Preview deployments para cada PR</li>
+              <li>CDN global con Edge Functions</li>
+            </ul>
+            <div class="verdict-box">
+              <span class="verdict-label">Ideal para:</span>
+              <span class="verdict-text">Frontend moderno + APIs ligeras</span>
+            </div>
+          </div>
+          <div class="split-right">
+            <div class="plan-comparison">
+              <div class="plan plan--free">
+                <h4>Hobby (Gratis)</h4>
+                <ul>
+                  <li>100 GB de bandwidth</li>
+                  <li>Serverless: 100 GB-hrs</li>
+                  <li>1 persona, no comercial</li>
+                </ul>
+              </div>
+              <div class="plan plan--pro">
+                <h4>Pro ($20/mes)</h4>
+                <ul>
+                  <li>1 TB de bandwidth</li>
+                  <li>1,000 GB-hrs serverless</li>
+                  <li>Comercial permitido</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: Netlify -->
+    <section class="slide slide--gradient-netlify" data-slide="4">
+      <div class="slide-content">
+        <div class="slide-label">Static Sites & JAMstack</div>
+        <h2>Netlify</h2>
+        <div class="split-layout">
+          <div class="split-left">
+            <ul class="check-list">
+              <li>Deploy automático + drag & drop</li>
+              <li>Forms backend sin server</li>
+              <li>Functions (Lambda-based)</li>
+              <li>Split testing (A/B) integrado</li>
+              <li>Identity (auth básico incluido)</li>
+              <li>Redirects y headers desde archivo</li>
+            </ul>
+            <div class="verdict-box">
+              <span class="verdict-label">Ideal para:</span>
+              <span class="verdict-text">Landing pages, portfolios, blogs estáticos</span>
+            </div>
+          </div>
+          <div class="split-right">
+            <div class="plan-comparison">
+              <div class="plan plan--free">
+                <h4>Starter (Gratis)</h4>
+                <ul>
+                  <li>100 GB de bandwidth</li>
+                  <li>300 minutos de build</li>
+                  <li>1 miembro del equipo</li>
+                </ul>
+              </div>
+              <div class="plan plan--pro">
+                <h4>Pro ($19/mes)</h4>
+                <ul>
+                  <li>1 TB de bandwidth</li>
+                  <li>25,000 minutos build</li>
+                  <li>Soporte prioritario</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: Render -->
+    <section class="slide slide--gradient-render" data-slide="5">
+      <div class="slide-content">
+        <div class="slide-label">Backend & Containers</div>
+        <h2>Render</h2>
+        <div class="split-layout">
+          <div class="split-left">
+            <ul class="check-list">
+              <li>Web Services (Docker, Python, Node, Ruby, Go)</li>
+              <li>Static Sites (con CDN incluido)</li>
+              <li>Managed PostgreSQL y Redis</li>
+              <li>Cron Jobs y Background Workers</li>
+              <li>Auto-deploy desde GitHub</li>
+              <li>SSL automático en todos los servicios</li>
+            </ul>
+            <div class="verdict-box">
+              <span class="verdict-label">Ideal para:</span>
+              <span class="verdict-text">Backends, APIs, bases de datos completas</span>
+            </div>
+          </div>
+          <div class="split-right">
+            <div class="plan-comparison">
+              <div class="plan plan--free">
+                <h4>Free Tier</h4>
+                <ul>
+                  <li>Web Services se duermen tras 15 min inactividad</li>
+                  <li>750 horas/mes (spinning up)</li>
+                  <li>PostgreSQL: 90 días, 100 MB</li>
+                </ul>
+              </div>
+              <div class="plan plan--pro">
+                <h4>Starter ($7/mes)</h4>
+                <ul>
+                  <li>Sin sleep automático</li>
+                  <li>512 MB RAM dedicada</li>
+                  <li>PostgreSQL persistente</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: Fly.io -->
+    <section class="slide slide--gradient-fly" data-slide="6">
+      <div class="slide-content">
+        <div class="slide-label">Containers Globalmente</div>
+        <h2>Fly.io</h2>
+        <div class="split-layout">
+          <div class="split-left">
+            <ul class="check-list">
+              <li>Ejecuta Dockerfiles directamente</li>
+              <li>Despliega en 30+ regiones globales</li>
+              <li>Máquinas compartidas gratis (3 vm size shared-cpu-1x)</li>
+              <li>WireGuard networking privado</li>
+              <li>Anycast IPs y TLS automático</li>
+              <li>Volumenes persistentes</li>
+            </ul>
+            <div class="verdict-box">
+              <span class="verdict-label">Ideal para:</span>
+              <span class="verdict-text">Docker, apps que necesitan baja latencia global</span>
+            </div>
+          </div>
+          <div class="split-right">
+            <div class="plan-comparison">
+              <div class="plan plan--free">
+                <h4>Free Allowance</h4>
+                <ul>
+                  <li>3 máquinas compartidas</li>
+                  <li>160 GB de egress</li>
+                  <li>3 GB de almacenamiento</li>
+                </ul>
+              </div>
+              <div class="plan plan--pro">
+                <h4>Pay-as-you-go</h4>
+                <ul>
+                  <li>$0.00000167/sec CPU</li>
+                  <li>$0.00000167/sec RAM</li>
+                  <li>Sin compromiso mínimo</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8: Oracle Cloud -->
+    <section class="slide slide--gradient-oracle" data-slide="7">
+      <div class="slide-content">
+        <div class="slide-label">El "Santo Grial"</div>
+        <h2>Oracle Cloud Free Tier</h2>
+        <div class="split-layout">
+          <div class="split-left">
+            <ul class="check-list">
+              <li>VMs ARM (Ampere A1) GRATUITAS de por vida</li>
+              <li>Hasta 4 OCPU y 24 GB de RAM</li>
+              <li>200 GB de almacenamiento</li>
+              <li>Servidores de bases de datos included</li>
+              <li>Load Balancer gratuito</li>
+              <li>Acceso completo por SSH / root</li>
+            </ul>
+            <div class="verdict-box verdict-box--warning">
+              <span class="verdict-label">Ojo:</span>
+              <span class="verdict-text">Requiere configuración manual. No es "push and deploy".</span>
+            </div>
+          </div>
+          <div class="split-right">
+            <div class="plan-comparison">
+              <div class="plan plan--free plan--highlight">
+                <h4>Always Free &#10024;</h4>
+                <ul>
+                  <li>4 OCPU ARM, 24 GB RAM</li>
+                  <li>2 VMs AMD (1/8 OCPU, 1 GB)</li>
+                  <li>Sin límite de tiempo</li>
+                </ul>
+              </div>
+              <div class="plan plan--pro">
+                <h4>Free Trial ($300 crédito)</h4>
+                <ul>
+                  <li>30 días</li>
+                  <li>Servicios premium</li>
+                  <li>Después: solo Always Free</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 9: Otras opciones -->
+    <section class="slide slide--dark" data-slide="8">
+      <div class="slide-content">
+        <div class="slide-label">Menciones honoríficas</div>
+        <h2>Otras opciones que vale la pena conocer</h2>
+        <div class="alternatives-grid">
+          <div class="alt-card">
+            <h3>Railway</h3>
+            <p>Deploy ultra rápido. Detección automática de stack. $5 de crédito mensual gratis.</p>
+            <span class="alt-tag">Dockerfile / Docker Compose</span>
+          </div>
+          <div class="alt-card">
+            <h3>GitHub Pages</h3>
+            <p>Hosting estático directo desde tu repo. Ideal para documentación y portfolios.</p>
+            <span class="alt-tag">100% gratuito, sin límite real</span>
+          </div>
+          <div class="alt-card">
+            <h3>Cloudflare Pages</h3>
+            <p>CDN ultra rápido, Workers para lógica serverless. Sin límite de bandwidth.</p>
+            <span class="alt-tag">El más rápido del mundo</span>
+          </div>
+          <div class="alt-card">
+            <h3>Supabase / Firebase</h3>
+            <p>Backend-as-a-Service. Auth, DB, storage, realtime. Free tier generoso.</p>
+            <span class="alt-tag">Para apps completas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 10: Tabla comparativa -->
+    <section class="slide slide--light" data-slide="9">
+      <div class="slide-content">
+        <div class="slide-label">Comparativa</div>
+        <h2>Tabla Comparativa</h2>
+        <div class="table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Plataforma</th>
+                <th>Tipo</th>
+                <th>Stack principal</th>
+                <th>Limitación clave</th>
+                <th>Curva de aprendizaje</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Vercel</strong></td>
+                <td>Frontend + Serverless</td>
+                <td>Next.js, React, Vue</td>
+                <td>1 persona, no comercial</td>
+                <td class="difficulty difficulty--easy">&#11088; Fácil</td>
+              </tr>
+              <tr>
+                <td><strong>Netlify</strong></td>
+                <td>Static + JAMstack</td>
+                <td>Cualquier framework</td>
+                <td>300 min build</td>
+                <td class="difficulty difficulty--easy">&#11088; Fácil</td>
+              </tr>
+              <tr>
+                <td><strong>Render</strong></td>
+                <td>Backend + DB</td>
+                <td>Docker, Node, Python</td>
+                <td>Sleep tras 15 min</td>
+                <td class="difficulty difficulty--medium">&#11088;&#11088; Media</td>
+              </tr>
+              <tr>
+                <td><strong>Fly.io</strong></td>
+                <td>Containers globales</td>
+                <td>Docker</td>
+                <td>3 máquinas compartidas</td>
+                <td class="difficulty difficulty--hard">&#11088;&#11088;&#11088; Alta</td>
+              </tr>
+              <tr>
+                <td><strong>Oracle Cloud</strong></td>
+                <td>VMs completas</td>
+                <td>Lo que quieras</td>
+                <td>Configuración manual</td>
+                <td class="difficulty difficulty--hard">&#11088;&#11088;&#11088; Alta</td>
+              </tr>
+              <tr>
+                <td><strong>GitHub Pages</strong></td>
+                <td>Estático</td>
+                <td>HTML/CSS/JS</td>
+                <td>Solo estático</td>
+                <td class="difficulty difficulty--easy">&#11088; Fácil</td>
+              </tr>
+              <tr>
+                <td><strong>Cloudflare Pages</strong></td>
+                <td>Estático + Workers</td>
+                <td>Frameworks + JS</td>
+                <td>Sin DB propia</td>
+                <td class="difficulty difficulty--medium">&#11088;&#11088; Media</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 11: Ejemplo práctico en Render -->
+    <section class="slide slide--dark" data-slide="10">
+      <div class="slide-content">
+        <div class="slide-label">Hands-on</div>
+        <h2>Ejemplo Práctico: Deploy en Render</h2>
+        <div class="render-steps">
+          <div class="render-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Crear cuenta en Render</h3>
+              <p>Conecta tu cuenta de GitHub para acceso directo a tus repos.</p>
+            </div>
+            <div class="step-image">
+              <img src="images/2-render-github.jpeg" alt="Conectar GitHub en Render" loading="lazy">
+            </div>
+          </div>
+          <div class="render-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Crear un New Web Service</h3>
+              <p>Selecciona tu repo, elige el runtime (Docker, Node, Python...) y configura las variables de entorno.</p>
+            </div>
+            <div class="step-image">
+              <img src="images/1-render-dashboard.png" alt="Render Dashboard - New Web Service" loading="lazy">
+            </div>
+          </div>
+          <div class="render-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Tu app está online</h3>
+              <p>Render asigna un dominio <code>.onrender.com</code> con SSL automático. ¡Listo!</p>
+            </div>
+            <div class="step-image">
+              <img src="images/2.1-render-public.png" alt="Render - Aplicación desplegada" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 12: Cierre -->
+    <section class="slide slide--cover" data-slide="11">
+      <div class="slide-content">
+        <div class="cover-badge">Resumen</div>
+        <h1 class="cover-title">Deploy gratis,<br>aprende deployando.</h1>
+        <div class="closing-tips">
+          <div class="tip">
+            <span class="tip-number">1</span>
+            <p><strong>Empieza por Vercel o Netlify</strong> si tu app es frontend. Es lo más rápido para tener algo online.</p>
+          </div>
+          <div class="tip">
+            <span class="tip-number">2</span>
+            <p><strong>Render para backend.</strong> Si necesitas API + DB, Render te da todo gratis con mínima config.</p>
+          </div>
+          <div class="tip">
+            <span class="tip-number">3</span>
+            <p><strong>Oracle Cloud para el valiente.</strong> Si quieres un servidor real y no te asusta SSH, es el mejor deal que existe.</p>
+          </div>
+        </div>
+        <div class="cover-meta" style="margin-top: 2rem;">
+          <span>La mejor forma de aprender es haciendo.</span>
+        </div>
+        <div class="cover-decorative-cta">
+          <span>&#128640; &iexcl;A deployar!</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
