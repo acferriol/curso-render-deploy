@@ -14,7 +14,7 @@
   <!-- Navegación -->
   <nav class="nav-controls">
     <button class="nav-btn" id="prevBtn" aria-label="Anterior">&#10094;</button>
-    <span class="slide-counter" id="slideCounter">1 / 12</span>
+    <span class="slide-counter" id="slideCounter">1 / 14</span>
     <button class="nav-btn" id="nextBtn" aria-label="Siguiente">&#10095;</button>
   </nav>
 
@@ -442,47 +442,49 @@
       </div>
     </section>
 
-    <!-- SLIDE 11: Ejemplo práctico en Render -->
+    <!-- SLIDE 11: Render - Paso 1 -->
     <section class="slide slide--dark" data-slide="10">
       <div class="slide-content">
-        <div class="slide-label">Hands-on</div>
-        <h2>Ejemplo Práctico: Deploy en Render</h2>
-        <div class="render-steps">
-          <div class="render-step">
-            <div class="step-number">1</div>
-            <div class="step-content">
-              <h3>Crear cuenta en Render</h3>
-              <p>Conecta tu cuenta de GitHub para acceso directo a tus repos.</p>
-            </div>
-            <div class="step-image">
-              <img src="images/2-render-github.jpeg" alt="Conectar GitHub en Render" loading="lazy">
-            </div>
+        <div class="slide-label">Paso 1 de 3</div>
+        <h2>Conectar tu cuenta de GitHub</h2>
+        <div class="render-step-single">
+          <div class="step-image-large">
+            <img src="images/2-render-github.jpeg" alt="Conectar GitHub en Render" loading="lazy">
           </div>
-          <div class="render-step">
-            <div class="step-number">2</div>
-            <div class="step-content">
-              <h3>Crear un New Web Service</h3>
-              <p>Selecciona tu repo, elige el runtime (Docker, Node, Python...) y configura las variables de entorno.</p>
-            </div>
-            <div class="step-image">
-              <img src="images/1-render-dashboard.png" alt="Render Dashboard - New Web Service" loading="lazy">
-            </div>
-          </div>
-          <div class="render-step">
-            <div class="step-number">3</div>
-            <div class="step-content">
-              <h3>Tu app está online</h3>
-              <p>Render asigna un dominio <code>.onrender.com</code> con SSL automático. ¡Listo!</p>
-            </div>
-            <div class="step-image">
-              <img src="images/2.1-render-public.png" alt="Render - Aplicación desplegada" loading="lazy">
-            </div>
-          </div>
+          <p class="step-description">Conecta tu cuenta de GitHub para acceso directo a tus repos.</p>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 12: Cierre -->
+    <!-- SLIDE 12: Render - Paso 2 -->
+    <section class="slide slide--dark" data-slide="11">
+      <div class="slide-content">
+        <div class="slide-label">Paso 2 de 3</div>
+        <h2>Crear un New Web Service</h2>
+        <div class="render-step-single">
+          <div class="step-image-large">
+            <img src="images/1-render-dashboard.png" alt="Render Dashboard - New Web Service" loading="lazy">
+          </div>
+          <p class="step-description">Selecciona tu repo, elige el runtime (Docker, Node, Python...) y configura las variables de entorno.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 13: Render - Paso 3 -->
+    <section class="slide slide--dark" data-slide="12">
+      <div class="slide-content">
+        <div class="slide-label">Paso 3 de 3</div>
+        <h2>Tu app est&aacute; online</h2>
+        <div class="render-step-single">
+          <div class="step-image-large">
+            <img src="images/2.1-render-public.png" alt="Render - Aplicación desplegada" loading="lazy">
+          </div>
+          <p class="step-description">Render asigna un dominio <code>.onrender.com</code> con SSL autom&aacute;tico. &iexcl;Listo!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 14: Cierre -->
     <section class="slide slide--cover" data-slide="11">
       <div class="slide-content">
         <div class="cover-badge">Resumen</div>
